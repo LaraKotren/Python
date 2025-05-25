@@ -1,12 +1,11 @@
-﻿while True:
-    user_input = input("Введите число: → ")
-    
-    if user_input == "exit":
-        print("Выход из программы...")
-        break
-    
-    if user_input.lstrip('-').isdigit():
-        num_digits = len(user_input.lstrip('-'))
-        print(f"В этом числе {num_digits} цифры.")
-    else:
-        print("Ошибка: данные не являются числом.")
+﻿имя = input("Ваше имя: ")
+фамилия = input("Фамилия: ")
+возраст = input("Возраст: ")
+
+# Вывод с использованием метода format()
+print("\nРеализация через format:")
+print("Ваше имя: {}, Фамилия: {}, Возраст: {} лет".format(имя, фамилия, возраст))
+
+# Вывод с использованием f-string
+print("\nРеализация через f-string:")
+print(f"Ваше имя: {имя}, Фамилия: {фамилия}, Возраст: {возраст} лет")
