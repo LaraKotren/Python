@@ -1,19 +1,13 @@
-﻿def check_even_odd():
-    user_input = input("Введите число: ")
+﻿try:
+    age_input = input("Введите ваш возраст: ")
+    age = int(age_input)
     
-    try:
-        number = int(user_input)
-    except ValueError:
-        print("Ошибка: введено не число")
-        return
-    
-    if number < 0:
-        print("Ошибка: введено отрицательное число")
-        return
-    
-    if number % 2 == 0:
-        print(f"Число {number} является четным")
+    if age >= 0:
+        if age >= 18:
+            print("Вы совершеннолетний.")
+        else:
+            print("Вы несовершеннолетний.")
     else:
-        print(f"Число {number} не является четным")
-
-check_even_odd()
+        print("Ошибка: возраст не может быть отрицательным!")
+except ValueError:
+    print("Ошибка: введено не число!")
